@@ -1,1 +1,0 @@
-(function(){"use strict";class n extends AudioWorkletProcessor{process(c,i,u){const e=c[0];if(e&&e.length>0){const t=e[0],s=new Int16Array(t.length);for(let r=0;r<t.length;r++){const o=Math.max(-1,Math.min(1,t[r]));s[r]=o<0?o*32768:o*32767}this.port.postMessage(s.buffer,[s.buffer])}return!0}}registerProcessor("recorder-processor",n)})();
